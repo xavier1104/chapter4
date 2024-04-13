@@ -9,7 +9,6 @@ string ReadFile(string filename) {
 
 	string script((std::istreambuf_iterator<char>(file)), (std::istreambuf_iterator<char>()));
 	//123
-	//456
 	return script;
 }
 

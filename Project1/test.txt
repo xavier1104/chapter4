@@ -1,0 +1,26 @@
+A: B C D E F G
+B: A C D E F G H
+C: A B D E F G H I
+D: A B C E F G H I J
+E: A B C D F G H I J K
+F: A B C D E G H I J K L
+G: A B C D E F H I J K L M
+H: B C D E F G I J K L M N
+I: C D E F G H J K L M N O
+J: D E F G H I K L M N O P
+K: E F G H I J L M N O P Q
+L: F G H I J K M N O P Q R
+M: G H I J K L N O P Q R S
+N: H I J K L M O P Q R S T
+O: I J K L M N P Q R S T U
+P: J K L M N O Q R S T U V
+Q: K L M N O P R S T U V W
+R: L M N O P Q S T U V W X
+S: M N O P Q R T U V W X Y
+T: N O P Q R S U V W X Y Z
+U: O P Q R S T V W X Y Z
+V: P Q R S T U W X Y Z
+W: Q R S T U V X Y Z
+X: R S T U V W Y Z
+Y: S T U V W X Z
+Z: T U V W X Y

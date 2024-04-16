@@ -21,6 +21,12 @@
     <ClCompile Include="RelationshipAnalyzer.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
+    <ClCompile Include="RelationshipAnalyzerAdapter.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperRelationshipAnalyzer.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RelationshipAnalyzer.h">
@@ -28,6 +34,12 @@
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>資源檔</Filter>
+    </ClInclude>
+    <ClInclude Include="RelationshipAnalyzerAdapter.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperRelationshipAnalyzer.h">
+      <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

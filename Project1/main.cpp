@@ -15,10 +15,11 @@ string ReadFile(string filename) {
 
 int main()
 {
+	/*
 	string script = ReadFile("test.txt");
 
 	shared_ptr<RelationshipAnalyzer> rsa = make_shared<RelationshipAnalyzerAdapter>();
-
+	
 	rsa->Parse(script);
 
 	string name1 = "A", name2 = "B";
@@ -38,6 +39,28 @@ int main()
 			cout << f << ' ';
 		}
 		cout << '\n';
+	}
+	*/
+
+	typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::directedS> Graph;
+	Graph g;
+	boost::add_vertex(g);
+	boost::add_vertex(g);
+	boost::add_vertex(g);
+	boost::add_vertex(g);
+	boost::add_vertex(g);
+
+	boost::add_edge(0, 1, g);
+	boost::add_edge(1, 2, g);
+	boost::add_edge(2, 0, g);
+	boost::add_edge(3, 4, g);
+
+	vector<int> component(boost::num_vertices(g));
+
+	int num_component = boost::connected_components(g, &component[0]);
+
+	for (int i = 0; i < boost::num_vertices(g); ++i) {
+		cout << i << ',' << component[i] << endl;
 	}
 
 	return 0;

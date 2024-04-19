@@ -104,6 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\project\c++\boost_1_84_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,13 +129,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BGLRelationshipGraph.h" />
     <ClInclude Include="RelationshipAnalyzer.h" />
+    <ClInclude Include="RelationshipAnalyzerAdapter.h" />
     <ClInclude Include="RelationshipGraph.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BGLRelationshipGraph.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RelationshipAnalyzer.cpp" />
+    <ClCompile Include="RelationshipAnalyzerAdapter.cpp" />
     <ClCompile Include="RelationshipGraph.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -6,5 +6,5 @@ public:
 	RelationshipGraph();
 	~RelationshipGraph();
 
-	bool HasConnection(string name1, string name2);
+	virtual bool HasConnection(string name1, string name2) = 0;
 };

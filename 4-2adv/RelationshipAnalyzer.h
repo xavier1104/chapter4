@@ -1,10 +1,11 @@
 #pragma once
 
+class RelationshipGraph;
 class RelationshipAnalyzer
 {
 public:
 	RelationshipAnalyzer();
 	~RelationshipAnalyzer();
 
-	void Parse(string script) = 0;
+	virtual shared_ptr<RelationshipGraph> Parse(string script) = 0;
 };

@@ -37,6 +37,6 @@ shared_ptr<Employee> PasswordProtectedDatabaseProxy::GetEmployeeById(int id)
 			employee = VirtualDatabaseProxy::GetEmployeeById(id);
 		}
 	}
-
+	
 	return employee;
 }

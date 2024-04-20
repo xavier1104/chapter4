@@ -21,5 +21,7 @@ shared_ptr<Employee> RealDatabase::GetEmployeeById(int id)
 
 void RealDatabase::AddEmployee(shared_ptr<Employee> employee)
 {
-	employees_[employee->id_] = employee;
+	if (employee) {
+		employees_[employee->id_] = employee;
+	}
 }

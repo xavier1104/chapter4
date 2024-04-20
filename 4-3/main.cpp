@@ -17,17 +17,24 @@ void PrintEmployee(shared_ptr<Employee> employee, shared_ptr<Database> db) {
 int main()
 {
 	shared_ptr<Database> db = make_shared<PasswordProtectedDatabaseProxy>();
-	auto employee = db->GetEmployeeById(6);
-	if (!employee) {
-		cout << "Employee not exist\n";
-	}
-	else {
-		PrintEmployee(employee, db);
-		if (employee->subordinateIds_.size()) {
-			cout << "subordinates : \n";
-			for (auto& subId : employee->subordinateIds_) {
-				auto sub = db->GetEmployeeById(subId);
-				PrintEmployee(sub, db);
+	int id = 0;
+	while (1) {
+		cout << "Enter employee id : ";
+		cin >> id;
+
+		shared_ptr<Employee> employee = db->GetEmployeeById(id);
+
+		if (!employee) {
+			cout << "Employee not exist\n";
+		}
+		else {
+			PrintEmployee(employee, db);
+			if (employee->subordinateIds_.size()) {
+				cout << "subordinates : \n";
+				for (auto& subId : employee->subordinateIds_) {
+					auto sub = db->GetEmployeeById(subId);
+					PrintEmployee(sub, db);
+				}
 			}
 		}
 	}

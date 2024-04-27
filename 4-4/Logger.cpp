@@ -34,7 +34,21 @@ Logger::~Logger()
 void Logger::Write(LEVEL level, string content)
 {
 	if (level_ <= level) {
-		string msgFormated = layout_->Output(content, shared_from_this());
+		string msgFormated = layout_->Output(content, shared_from_this(), level);
 		exporter_->Export(msgFormated);
 	}
+}
+
+string Logger::GetLevelStr(LEVEL level)
+{
+	switch (level)
+	{
+	case TRACE: return "TRACE";
+	case INFO:	return "INFO";
+	case DEBUG:	return "DEBUG";
+	case WARN:	return "WARN";
+	case ERROR:	return "ERROR";
+	}
+
+	return "";
 }

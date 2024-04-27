@@ -1,10 +1,10 @@
 #pragma once
 
-class StandardLayout : Layout
+class StandardLayout : public Layout
 {
 public:
 	StandardLayout();
 	~StandardLayout();
 
-	string Output(string msg, shared_ptr<Logger> logger) override;
+	string Output(string msg, shared_ptr<Logger> logger, Logger::LEVEL level) override;
 };

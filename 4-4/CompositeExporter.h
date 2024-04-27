@@ -1,6 +1,6 @@
 #pragma once
 
-class CompositeExporter : Exporter
+class CompositeExporter : public Exporter
 {
 public:
 	CompositeExporter(vector<shared_ptr<Exporter>> exporters);

@@ -11,7 +11,7 @@ StandardLayout::~StandardLayout()
 {
 }
 
-string StandardLayout::Output(string msg, shared_ptr<Logger> logger)
+string StandardLayout::Output(string msg, shared_ptr<Logger> logger, Logger::LEVEL level)
 {
 	auto now = chrono::system_clock::now();
 	auto now_time = chrono::system_clock::to_time_t(now);
@@ -24,6 +24,6 @@ string StandardLayout::Output(string msg, shared_ptr<Logger> logger)
 	ss << put_time(&timeinfo, "%Y-%m-%d %H:%M:%S");
 	ss << '.' << std::setfill('0') << std::setw(3) << now_ms.count();
 
-	ss << " |-"
+	ss << " |-" << logger->GetLevelStr(level) << ' ' << logger->GetName() << " - " << msg;
 	return ss.str();
 }

@@ -24,8 +24,8 @@ public:
 	shared_ptr<Layout> GetLayout() { return layout_; }
 	shared_ptr<Exporter> GetExporter() { return exporter_; }
 
-	void Error(string msg);
 	void Write(LEVEL level, string content);
+	string GetLevelStr(LEVEL level);
 
 private:
 	string name_;

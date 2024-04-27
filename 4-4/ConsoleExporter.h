@@ -1,6 +1,6 @@
 #pragma once
 
-class ConsoleExporter : Exporter
+class ConsoleExporter : public Exporter
 {
 public:
 	ConsoleExporter();

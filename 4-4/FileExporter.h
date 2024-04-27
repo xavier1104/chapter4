@@ -1,6 +1,6 @@
 #pragma once
 
-class FileExporter : Exporter
+class FileExporter : public Exporter
 {
 public:
 	FileExporter(string filename);

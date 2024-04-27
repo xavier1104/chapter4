@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,20 +128,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AI.cpp" />
     <ClCompile Include="CompositeExporter.cpp" />
     <ClCompile Include="ConsoleExporter.cpp" />
     <ClCompile Include="Exporter.cpp" />
     <ClCompile Include="FileExporter.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Layout.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StandardLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AI.h" />
     <ClInclude Include="CompositeExporter.h" />
     <ClInclude Include="ConsoleExporter.h" />
     <ClInclude Include="Exporter.h" />
     <ClInclude Include="FileExporter.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Layout.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="StandardLayout.h" />

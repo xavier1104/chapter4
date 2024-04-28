@@ -25,7 +25,9 @@ public:
 	shared_ptr<Exporter> GetExporter() { return exporter_; }
 
 	void Write(LEVEL level, string content);
-	string GetLevelStr(LEVEL level);
+
+	static string GetLevelStr(LEVEL level);
+	static LEVEL GetLevelByStr(string level);
 
 private:
 	string name_;

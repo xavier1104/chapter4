@@ -19,6 +19,6 @@ void FileExporter::Export(string msg)
 		return;
 	}
 
-	f << msg;
+	f << msg << '\n';
 	f.close();
 }

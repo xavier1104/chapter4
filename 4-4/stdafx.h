@@ -11,5 +11,7 @@
 #include <cstdlib>
 #include <chrono>
 #include <iomanip>
+#include <rapidjson/document.h>
 
+using namespace rapidjson;
 using namespace std;

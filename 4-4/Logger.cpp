@@ -52,3 +52,24 @@ string Logger::GetLevelStr(LEVEL level)
 
 	return "";
 }
+
+Logger::LEVEL Logger::GetLevelByStr(string level)
+{
+	if (level == "TRACE") {
+		return TRACE;
+	}
+	else if (level == "INFO") {
+		return INFO;
+	}
+	else if (level == "DEBUG") {
+		return DEBUG;
+	}
+	else if (level == "WARN") {
+		return WARN;
+	}
+	else if (level == "ERROR") {
+		return ERROR;
+	}
+
+	return NONE;
+}

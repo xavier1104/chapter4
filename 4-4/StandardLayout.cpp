@@ -24,6 +24,6 @@ string StandardLayout::Output(string msg, shared_ptr<Logger> logger, Logger::LEV
 	ss << put_time(&timeinfo, "%Y-%m-%d %H:%M:%S");
 	ss << '.' << std::setfill('0') << std::setw(3) << now_ms.count();
 
-	ss << " |-" << logger->GetLevelStr(level) << ' ' << logger->GetName() << " - " << msg;
+	ss << " |-" << Logger::GetLevelStr(level) << ' ' << logger->GetName() << " - " << msg;
 	return ss.str();
 }

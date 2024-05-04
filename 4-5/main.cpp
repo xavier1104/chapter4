@@ -38,11 +38,34 @@ void LoadConfig(string filename, map<string, vector<string>>& config)
 	}
 }
 
+void LoadBlackList(string filename, set<string>& list)
+{
+	ifstream f(filename);
+
+	if (f.fail()) {
+		cout << "Load BlackList " << filename << " failed\n";
+		return;
+	}
+	
+	string line;
+	string token;
+	while (!f.eof()) {
+		getline(f, line);
+		istringstream ss(line);
+		while (getline(ss, token, ',')) {
+			list.emplace(token);
+		}
+	}
+}
+
 int main()
 {
 	map<string, vector<string>> config;
 	LoadConfig("config", config);
 
-
+	set<string> blackList;
+	LoadBlackList("blacklist", blackList);
+	
+	
 	return 0;
 }

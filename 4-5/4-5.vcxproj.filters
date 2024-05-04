@@ -27,6 +27,15 @@
     <ClCompile Include="ServiceDiscoverProcesser.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
+    <ClCompile Include="LoadBalanceProcesser.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackListProcesser.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeHttpClient.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -39,6 +48,15 @@
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="ServiceDiscoverProcesser.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadBalanceProcesser.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackListProcesser.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeHttpClient.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>

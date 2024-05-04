@@ -128,13 +128,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BlackListProcesser.cpp" />
+    <ClCompile Include="FakeHttpClient.cpp" />
     <ClCompile Include="HttpClient.cpp" />
+    <ClCompile Include="LoadBalanceProcesser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ServiceDiscoverProcesser.cpp" />
     <ClCompile Include="URLProcesser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlackListProcesser.h" />
+    <ClInclude Include="FakeHttpClient.h" />
     <ClInclude Include="HttpClient.h" />
+    <ClInclude Include="LoadBalanceProcesser.h" />
     <ClInclude Include="ServiceDiscoverProcesser.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="URLProcesser.h" />

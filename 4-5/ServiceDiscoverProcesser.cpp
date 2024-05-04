@@ -5,6 +5,7 @@
 
 ServiceDiscoverProcesser::ServiceDiscoverProcesser(shared_ptr<HttpClient> httpClient, map<string, vector<string>>& config)
 	:URLProcesser(httpClient)
+	, config_(config)
 {
 }
 

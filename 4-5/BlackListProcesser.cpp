@@ -1,12 +1,13 @@
 #include "stdafx.h"
 #include "HttpClient.h"
 #include "URLProcesser.h"
+#include "BlackListException.h"
 #include "BlackListProcesser.h"
 
-BlackListProcesser::BlackListProcesser(shared_ptr<HttpClient> httpClient, set<string>& list)
+BlackListProcesser::BlackListProcesser(shared_ptr<HttpClient> httpClient)
 	:URLProcesser(httpClient)
-	,list_(list)
 {
+	LoadList("blacklist.txt");
 }
 
 BlackListProcesser::~BlackListProcesser()
@@ -22,11 +23,31 @@ void BlackListProcesser::Send(vector<string>& urls)
 				continue;
 			}
 			
-			cout << "host in black list!\n";
-			cin.get();
-			exit(0);
+			throw BlackListException(host);
 		}
 	}
 
 	httpClient_->Send(urls);
+}
+
+void BlackListProcesser::LoadList(string filename)
+{
+	list_.clear();
+
+	ifstream f(filename);
+
+	if (f.fail()) {
+		cout << "Load BlackList " << filename << " failed\n";
+		return;
+	}
+
+	string line;
+	string token;
+	while (!f.eof()) {
+		getline(f, line);
+		istringstream ss(line);
+		while (getline(ss, token, ',')) {
+			list_.emplace(token);
+		}
+	}
 }

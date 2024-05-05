@@ -11,5 +11,7 @@
 #include <cstdlib>
 #include <chrono>
 #include <iomanip>
+#include <exception>
+#include <list>
 
 using namespace std;

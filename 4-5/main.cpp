@@ -1,71 +1,31 @@
 #include "stdafx.h"
-
-void LoadConfig(string filename, map<string, vector<string>>& config)
-{
-	ifstream f(filename);
-	if (f.fail()) {
-		cout << "Load " << filename << " failed\n";
-	}
-
-	string line;
-	while (!f.eof()) {
-		getline(f, line);
-
-		istringstream ss(line);
-		string token;
-		vector<string> tokens;
-		while (getline(ss, token, ':')) {
-			tokens.emplace_back(token);
-		}
-
-		if (tokens.size() != 2) {
-			cout << "Config format err\n";
-			continue;
-		}
-
-		string host = tokens[0];
-		
-		tokens.clear();
-		ss.clear();
-		ss.str(tokens[1]);
-		while (getline(ss, token, ',')) {
-			tokens.emplace_back(token);
-		}
-
-		for (auto& ip : tokens) {
-			config[host].emplace_back(ip);
-		}
-	}
-}
-
-void LoadBlackList(string filename, set<string>& list)
-{
-	ifstream f(filename);
-
-	if (f.fail()) {
-		cout << "Load BlackList " << filename << " failed\n";
-		return;
-	}
-	
-	string line;
-	string token;
-	while (!f.eof()) {
-		getline(f, line);
-		istringstream ss(line);
-		while (getline(ss, token, ',')) {
-			list.emplace(token);
-		}
-	}
-}
+#include "HttpClient.h"
+#include "URLProcesser.h"
+#include "BlackListProcesser.h"
+#include "LoadBalanceProcesser.h"
+#include "ServiceDiscoverProcesser.h"
+#include "BlackListException.h"
+#include "RequestFailException.h"
+#include "FakeHttpClient.h"
 
 int main()
 {
-	map<string, vector<string>> config;
-	LoadConfig("config", config);
+	vector<string> urls = { "http://waterballsa.tw/mail" };
+	shared_ptr<HttpClient> httpClient = 
+		make_shared<BlackListProcesser>(make_shared<LoadBalanceProcesser>(make_shared<ServiceDiscoverProcesser>(make_shared<FakeHttpClient>())));
+	
+	while (1) {
+		cout << "Press Enter to send url\n";
+		cin.get();
 
-	set<string> blackList;
-	LoadBlackList("blacklist", blackList);
-	
-	
+		try {
+			httpClient->Send(urls);
+		}
+		catch (const BlackListException& e) {
+			cerr << e.what();
+			cin.get();
+			exit(0);
+		}
+	}
 	return 0;
 }

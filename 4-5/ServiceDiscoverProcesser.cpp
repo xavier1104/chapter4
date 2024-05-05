@@ -1,12 +1,13 @@
 #include "stdafx.h"
 #include "HttpClient.h"
 #include "URLProcesser.h"
+#include "RequestFailException.h"
 #include "ServiceDiscoverProcesser.h"
 
-ServiceDiscoverProcesser::ServiceDiscoverProcesser(shared_ptr<HttpClient> httpClient, map<string, vector<string>>& config)
+ServiceDiscoverProcesser::ServiceDiscoverProcesser(shared_ptr<HttpClient> httpClient)
 	:URLProcesser(httpClient)
-	, config_(config)
 {
+	LoadConfig("config.txt");
 }
 
 ServiceDiscoverProcesser::~ServiceDiscoverProcesser()
@@ -18,8 +19,8 @@ void ServiceDiscoverProcesser::Send(vector<string>& urls)
 	vector<string> discoveredUrls;
 	for (string& url : urls) {
 		vector<string> replacedUrls = ReplacedUrls(url);
-		for (string& repacedUrl : replacedUrls) {
-			replacedUrls.emplace_back(repacedUrl);
+		for (string& replacedUrl : replacedUrls) {
+			discoveredUrls.emplace_back(replacedUrl);
 		}
 
 		if (replacedUrls.size() == 0) {
@@ -27,7 +28,13 @@ void ServiceDiscoverProcesser::Send(vector<string>& urls)
 		}
 	}
 
-	httpClient_->Send(discoveredUrls);
+	try {
+		httpClient_->Send(discoveredUrls);
+	}
+	catch (const RequestFailException& e) {
+		cerr << e.what() << '\n';
+		AddInvalid(e.GetFailUrl());
+	}
 }
 
 vector<string> ServiceDiscoverProcesser::ReplacedUrls(string& url)
@@ -40,7 +47,7 @@ vector<string> ServiceDiscoverProcesser::ReplacedUrls(string& url)
 		}
 
 		for (auto& ip : ips) {
-			auto&& it = inValidIPs_.find(ip);
+			auto&& it = find(inValidIPs_.begin(), inValidIPs_.end(), ip);
 			if (it != inValidIPs_.end()) {
 				continue;
 			}
@@ -56,7 +63,70 @@ vector<string> ServiceDiscoverProcesser::ReplacedUrls(string& url)
 	return replacedUrls;
 }
 
-void ServiceDiscoverProcesser::AddInValidIP(string& ip)
+void ServiceDiscoverProcesser::LoadConfig(string filename)
 {
-	inValidIPs_.emplace(ip);
+	config_.clear();
+
+	ifstream f(filename);
+	if (f.fail()) {
+		cout << "Load " << filename << " failed\n";
+	}
+
+	string line;
+	while (!f.eof()) {
+		getline(f, line);
+
+		istringstream ss(line);
+		string token;
+		vector<string> tokens;
+		while (getline(ss, token, ':')) {
+			tokens.emplace_back(token);
+		}
+
+		if (tokens.size() != 2) {
+			cout << "Config format err\n";
+			continue;
+		}
+
+		string host = tokens[0];
+
+		ss.clear();
+		ss.str(tokens[1]);
+
+		tokens.clear();
+		while (getline(ss, token, ',')) {
+			tokens.emplace_back(token);
+		}
+
+		for (auto& ip : tokens) {
+			config_[host].emplace_back(ip);
+		}
+	}
+}
+
+void ServiceDiscoverProcesser::AddInvalid(string url)
+{
+	size_t begin = url.find("//");
+	if (begin == string::npos) {
+		return;
+	}
+
+	size_t end = url.find("/", begin + 2);
+	if (end == string::npos) {
+		return;
+	}
+
+	begin = begin + 2;
+	string invalidIP = url.substr(begin, (end - begin));
+	for (auto&& [host, ips] : config_) {
+		for (auto& ip : ips) {
+			if (invalidIP == ip) {
+				inValidIPs_.emplace_back(ip);
+			}
+		}
+	}
+
+	if (inValidIPs_.size() > 1) {
+		inValidIPs_.pop_front();
+	}
 }

@@ -119,6 +119,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,6 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BlackListException.cpp" />
+    <ClCompile Include="RequestFailException.cpp" />
     <ClCompile Include="BlackListProcesser.cpp" />
     <ClCompile Include="FakeHttpClient.cpp" />
     <ClCompile Include="HttpClient.cpp" />
@@ -137,6 +141,8 @@
     <ClCompile Include="URLProcesser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlackListException.h" />
+    <ClInclude Include="RequestFailException.h" />
     <ClInclude Include="BlackListProcesser.h" />
     <ClInclude Include="FakeHttpClient.h" />
     <ClInclude Include="HttpClient.h" />

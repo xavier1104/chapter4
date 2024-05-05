@@ -1,5 +1,7 @@
 #pragma once
 
+#include "HttpClient.h"
+
 class HttpClient;
 class FakeHttpClient : public HttpClient
 {

@@ -19,4 +19,5 @@ void LoadBalanceProcesser::Send(vector<string>& urls)
 	vector<string> selectedURLs = { urls[i] };
 
 	httpClient_->Send(selectedURLs);
+	i++;
 }

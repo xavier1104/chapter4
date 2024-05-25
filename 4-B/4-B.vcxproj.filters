@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="來源檔案">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="標頭檔\States">
+      <UniqueIdentifier>{c3bc9c32-e61f-468e-90da-8c97f1b50ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="來源檔案\States">
+      <UniqueIdentifier>{3c03e66f-275e-44bf-9262-61cb7dc3e03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\Guards">
+      <UniqueIdentifier>{d2dd78a3-5aec-4f41-a871-688338bfe89e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="來源檔案\Guards">
+      <UniqueIdentifier>{b1543c73-3b5e-42db-9e82-1dc43bd5c066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\Commands">
+      <UniqueIdentifier>{b3377c49-47d7-4beb-96ef-92e93c47daba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="來源檔案\Commands">
+      <UniqueIdentifier>{eb4a5a7a-e12c-448e-9248-42353e1dde8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="來源檔案\Actions">
+      <UniqueIdentifier>{e998a4bb-8376-410d-a16f-8b7303240d0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\Actions">
+      <UniqueIdentifier>{fcf136a2-f7f7-4417-838c-5d7a00cbd892}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Community.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatRoom.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Forum.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Broadcast.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Member.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Message.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Post.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Comment.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Speak.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Transition.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultConversation.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="KnowledgeKing.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Interacting.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Normal.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="MemberLessThan10Guard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="MemberLargerOrEqual10Guard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="Questioning.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="ThanksForJoining.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandGuard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeElapsedGuard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="FiniteStateMachine.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="StateSystem.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="KingCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Action.cpp">
+      <Filter>來源檔案\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandAction.cpp">
+      <Filter>來源檔案\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Guard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayAgainCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="KingStopCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Record.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Recording.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Waiting.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="RecordCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="StopRecordingCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotFSMFacade.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>資源檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Community.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatRoom.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Forum.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Broadcast.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Member.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Post.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Comment.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Speak.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="KnowledgeKing.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultConversation.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Interacting.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Normal.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="MemberLessThan10Guard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="MemberLargerOrEqual10Guard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="Questioning.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="ThanksForJoining.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandGuard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeElapsedGuard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteStateMachine.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="StateSystem.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="KingCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>標頭檔\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAction.h">
+      <Filter>標頭檔\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Guard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayAgainCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="KingStopCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Record.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Recording.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Waiting.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="StopRecordingCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotFSMFacade.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="GuardArgs.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionArgs.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="DataType.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -21,3 +21,9 @@
 
 4-5物件導向設計圖 使用裝飾者模式
 ![4-5-ood](https://github.com/xavier1104/chapter4/assets/18095263/1a6be581-1fae-4fd4-bca5-1ca53053e0ab)
+
+4-B物件導向分析圖
+![4-B-ooa](https://github.com/xavier1104/chapter4/assets/18095263/11d9a728-daec-4fd4-9968-dd9fe95bb7e8)
+
+4-B物件導向設計圖 使用複合模式、狀態機模式、門面模式
+![4-B-ood](https://github.com/xavier1104/chapter4/assets/18095263/cac4270d-2e90-4066-ab6e-569b3d91c3c2)

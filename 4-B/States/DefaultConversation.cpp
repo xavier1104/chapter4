@@ -1,8 +1,8 @@
-#include "stdafx.h"
-#include "Event.h"
+#include "../stdafx.h"
+#include "../Event.h"
 #include "State.h"
-#include "utility.h"
-#include "Robot.h"
+#include "../utility.h"
+#include "../Robot.h"
 #include "DefaultConversation.h"
 
 DefaultConversation::DefaultConversation(shared_ptr<Robot> robot, shared_ptr<StateSystem> system)

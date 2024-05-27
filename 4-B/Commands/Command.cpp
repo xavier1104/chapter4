@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "Command.h"
 
 Command::Command(int quota, string name)

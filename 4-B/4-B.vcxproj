@@ -123,6 +123,7 @@
       <AdditionalIncludeDirectories>D:\project\c++\rapidjson-master\rapidjson-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,10 +134,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Action.cpp" />
+    <ClCompile Include="Actions\Action.cpp" />
+    <ClCompile Include="Actions\CommandAction.cpp" />
     <ClCompile Include="Broadcast.cpp" />
     <ClCompile Include="ChatRoom.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="CommandGuard.cpp" />
+    <ClCompile Include="Commands\Command.cpp" />
+    <ClCompile Include="Commands\KingCommand.cpp" />
+    <ClCompile Include="Commands\KingStopCommand.cpp" />
+    <ClCompile Include="Commands\PlayAgainCommand.cpp" />
+    <ClCompile Include="Commands\RecordCommand.cpp" />
+    <ClCompile Include="Commands\StopRecordingCommand.cpp" />
     <ClCompile Include="Comment.cpp" />
     <ClCompile Include="Community.cpp" />
     <ClCompile Include="CommandAction.cpp" />
@@ -144,6 +153,11 @@
     <ClCompile Include="FiniteStateMachine.cpp" />
     <ClCompile Include="Forum.cpp" />
     <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Guards\CommandGuard.cpp" />
+    <ClCompile Include="Guards\Guard.cpp" />
+    <ClCompile Include="Guards\MemberLargerOrEqual10Guard.cpp" />
+    <ClCompile Include="Guards\MemberLessThan10Guard.cpp" />
+    <ClCompile Include="Guards\TimeElapsedGuard.cpp" />
     <ClCompile Include="Interacting.cpp" />
     <ClCompile Include="KingCommand.cpp" />
     <ClCompile Include="KingStopCommand.cpp" />
@@ -165,6 +179,18 @@
     <ClCompile Include="Speak.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateSystem.cpp" />
+    <ClCompile Include="States\DefaultConversation.cpp" />
+    <ClCompile Include="States\FiniteStateMachine.cpp" />
+    <ClCompile Include="States\Interacting.cpp" />
+    <ClCompile Include="States\KnowledgeKing.cpp" />
+    <ClCompile Include="States\Normal.cpp" />
+    <ClCompile Include="States\Questioning.cpp" />
+    <ClCompile Include="States\Record.cpp" />
+    <ClCompile Include="States\Recording.cpp" />
+    <ClCompile Include="States\State.cpp" />
+    <ClCompile Include="States\StateSystem.cpp" />
+    <ClCompile Include="States\ThanksForJoining.cpp" />
+    <ClCompile Include="States\Waiting.cpp" />
     <ClCompile Include="StopRecordingCommand.cpp" />
     <ClCompile Include="ThanksForJoining.cpp" />
     <ClCompile Include="TimeElapsedGuard.cpp" />
@@ -174,10 +200,18 @@
   <ItemGroup>
     <ClInclude Include="Action.h" />
     <ClInclude Include="ActionArgs.h" />
+    <ClInclude Include="Actions\Action.h" />
+    <ClInclude Include="Actions\CommandAction.h" />
     <ClInclude Include="Broadcast.h" />
     <ClInclude Include="ChatRoom.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandGuard.h" />
+    <ClInclude Include="Commands\Command.h" />
+    <ClInclude Include="Commands\KingCommand.h" />
+    <ClInclude Include="Commands\KingStopCommand.h" />
+    <ClInclude Include="Commands\PlayAgainCommand.h" />
+    <ClInclude Include="Commands\RecordCommand.h" />
+    <ClInclude Include="Commands\StopRecordingCommand.h" />
     <ClInclude Include="Comment.h" />
     <ClInclude Include="Community.h" />
     <ClInclude Include="CommandAction.h" />
@@ -188,6 +222,11 @@
     <ClInclude Include="Forum.h" />
     <ClInclude Include="Guard.h" />
     <ClInclude Include="GuardArgs.h" />
+    <ClInclude Include="Guards\CommandGuard.h" />
+    <ClInclude Include="Guards\Guard.h" />
+    <ClInclude Include="Guards\MemberLargerOrEqual10Guard.h" />
+    <ClInclude Include="Guards\MemberLessThan10Guard.h" />
+    <ClInclude Include="Guards\TimeElapsedGuard.h" />
     <ClInclude Include="Interacting.h" />
     <ClInclude Include="KingCommand.h" />
     <ClInclude Include="KingStopCommand.h" />
@@ -208,6 +247,18 @@
     <ClInclude Include="Speak.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateSystem.h" />
+    <ClInclude Include="States\DefaultConversation.h" />
+    <ClInclude Include="States\FiniteStateMachine.h" />
+    <ClInclude Include="States\Interacting.h" />
+    <ClInclude Include="States\KnowledgeKing.h" />
+    <ClInclude Include="States\Normal.h" />
+    <ClInclude Include="States\Questioning.h" />
+    <ClInclude Include="States\Record.h" />
+    <ClInclude Include="States\Recording.h" />
+    <ClInclude Include="States\State.h" />
+    <ClInclude Include="States\StateSystem.h" />
+    <ClInclude Include="States\ThanksForJoining.h" />
+    <ClInclude Include="States\Waiting.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="StopRecordingCommand.h" />
     <ClInclude Include="ThanksForJoining.h" />

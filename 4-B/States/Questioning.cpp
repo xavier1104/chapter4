@@ -1,9 +1,9 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "State.h"
-#include "Event.h"
-#include "utility.h"
-#include "Community.h"
-#include "Robot.h"
+#include "../Event.h"
+#include "../utility.h"
+#include "../Community.h"
+#include "../Robot.h"
 #include "Questioning.h"
 
 vector<pair<string, string>> Questioning::questions_ = {

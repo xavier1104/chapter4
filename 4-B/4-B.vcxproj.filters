@@ -153,6 +153,81 @@
     <ClCompile Include="RobotFSMFacade.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
+    <ClCompile Include="States\Waiting.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\ThanksForJoining.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\StateSystem.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\State.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Recording.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Record.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Questioning.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Normal.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\KnowledgeKing.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\Interacting.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\FiniteStateMachine.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="States\DefaultConversation.cpp">
+      <Filter>來源檔案\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Guards\TimeElapsedGuard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="Guards\MemberLessThan10Guard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="Guards\MemberLargerOrEqual10Guard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="Guards\Guard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="Guards\CommandGuard.cpp">
+      <Filter>來源檔案\Guards</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\StopRecordingCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\RecordCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\PlayAgainCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\KingStopCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\KingCommand.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Commands\Command.cpp">
+      <Filter>來源檔案\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\Action.cpp">
+      <Filter>來源檔案\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions\CommandAction.cpp">
+      <Filter>來源檔案\Actions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -283,6 +358,81 @@
     </ClInclude>
     <ClInclude Include="DataType.h">
       <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\Action.h">
+      <Filter>標頭檔\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions\CommandAction.h">
+      <Filter>標頭檔\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\Command.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\KingCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\KingStopCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\PlayAgainCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\RecordCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands\StopRecordingCommand.h">
+      <Filter>標頭檔\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Guards\CommandGuard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="Guards\Guard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="Guards\MemberLargerOrEqual10Guard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="Guards\MemberLessThan10Guard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="Guards\TimeElapsedGuard.h">
+      <Filter>標頭檔\Guards</Filter>
+    </ClInclude>
+    <ClInclude Include="States\DefaultConversation.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\FiniteStateMachine.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Interacting.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\KnowledgeKing.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Normal.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Questioning.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Record.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Recording.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\State.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\StateSystem.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\ThanksForJoining.h">
+      <Filter>標頭檔\States</Filter>
+    </ClInclude>
+    <ClInclude Include="States\Waiting.h">
+      <Filter>標頭檔\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

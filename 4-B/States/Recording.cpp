@@ -1,6 +1,6 @@
-#include "stdafx.h"
-#include "Event.h"
-#include "Robot.h"
+#include "../stdafx.h"
+#include "../Event.h"
+#include "../Robot.h"
 #include "Recording.h"
 
 Recording::Recording(shared_ptr<Robot> robot, shared_ptr<StateSystem> system)

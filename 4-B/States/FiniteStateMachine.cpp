@@ -1,8 +1,8 @@
-#include "stdafx.h"
-#include "Event.h"
+#include "../stdafx.h"
+#include "../Event.h"
 #include "StateSystem.h"
-#include "Transition.h"
-#include "Robot.h"
+#include "../Transition.h"
+#include "../Robot.h"
 #include "FiniteStateMachine.h"
 
 FiniteStateMachine::FiniteStateMachine(shared_ptr<StateSystem> current, vector<shared_ptr<Transition>> transitions)

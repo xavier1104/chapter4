@@ -1,8 +1,8 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "State.h"
-#include "Event.h"
-#include "Community.h"
-#include "Robot.h"
+#include "../Event.h"
+#include "../Community.h"
+#include "../Robot.h"
 #include "ThanksForJoining.h"
 
 ThanksForJoining::ThanksForJoining(shared_ptr<Community> community, shared_ptr<Robot> robot, shared_ptr<StateSystem> system)

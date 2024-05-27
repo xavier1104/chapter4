@@ -1,11 +1,11 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "Guard.h"
-#include "Event.h"
-#include "utility.h"
-#include "Community.h"
-#include "Robot.h"
-#include "Member.h"
-#include "Command.h"
+#include "../Event.h"
+#include "../utility.h"
+#include "../Community.h"
+#include "../Robot.h"
+#include "../Member.h"
+#include "../Commands/Command.h"
 #include "CommandGuard.h"
 
 CommandGuard::CommandGuard(shared_ptr<Command> command, shared_ptr<Community> community, shared_ptr<Robot> robot)

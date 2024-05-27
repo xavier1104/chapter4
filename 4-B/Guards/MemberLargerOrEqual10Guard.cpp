@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "Community.h"
+#include "../stdafx.h"
+#include "../Community.h"
 #include "MemberLargerOrEqual10Guard.h"
 
 MemberLargerOrEqual10Guard::MemberLargerOrEqual10Guard(shared_ptr<Community> community)

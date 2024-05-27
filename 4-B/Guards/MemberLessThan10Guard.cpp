@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "Guard.h"
-#include "Community.h"
+#include "../Community.h"
 #include "MemberLessThan10Guard.h"
 
 MemberLessThan10Guard::MemberLessThan10Guard(shared_ptr<Community> community)

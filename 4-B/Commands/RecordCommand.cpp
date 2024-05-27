@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "Command.h"
-#include "Robot.h"
+#include "../Robot.h"
 #include "RecordCommand.h"
 
 RecordCommand::RecordCommand()

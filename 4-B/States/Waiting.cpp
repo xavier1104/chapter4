@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "Event.h"
+#include "../stdafx.h"
+#include "../Event.h"
 #include "Waiting.h"
 
 Waiting::Waiting(shared_ptr<Robot> robot, shared_ptr<StateSystem> system)

@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "Member.h"
+#include "../stdafx.h"
+#include "../Member.h"
 #include "KingStopCommand.h"
 
 KingStopCommand::KingStopCommand()

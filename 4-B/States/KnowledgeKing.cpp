@@ -1,6 +1,6 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "StateSystem.h"
-#include "Robot.h"
+#include "../Robot.h"
 #include "Questioning.h"
 #include "ThanksForJoining.h"
 #include "FiniteStateMachine.h"

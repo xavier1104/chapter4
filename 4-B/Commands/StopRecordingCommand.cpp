@@ -1,8 +1,8 @@
-#include "stdafx.h"
-#include "Recording.h"
-#include "Member.h"
-#include "Event.h"
-#include "Community.h"
+#include "../stdafx.h"
+#include "../States/Recording.h"
+#include "../Member.h"
+#include "../Event.h"
+#include "../Community.h"
 #include "StopRecordingCommand.h"
 
 StopRecordingCommand::StopRecordingCommand(shared_ptr<Recording> recording, shared_ptr<Community> community)

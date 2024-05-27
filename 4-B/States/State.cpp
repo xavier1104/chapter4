@@ -1,7 +1,7 @@
-#include "stdafx.h"
-#include "Event.h"
+#include "../stdafx.h"
+#include "../Event.h"
 #include "StateSystem.h"
-#include "Robot.h"
+#include "../Robot.h"
 #include "State.h"
 
 State::State(shared_ptr<Robot> robot, shared_ptr<StateSystem> system)

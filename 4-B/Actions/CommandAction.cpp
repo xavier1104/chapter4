@@ -1,6 +1,6 @@
-#include "stdafx.h"
-#include "Command.h"
-#include "Robot.h"
+#include "../stdafx.h"
+#include "../Commands/Command.h"
+#include "../Robot.h"
 #include "CommandAction.h"
 
 CommandAction::CommandAction(shared_ptr<Command> command, shared_ptr<Robot> robot)

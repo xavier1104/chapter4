@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "Event.h"
+#include "../stdafx.h"
+#include "../Event.h"
 #include "TimeElapsedGuard.h"
 
 TimeElapsedGuard::TimeElapsedGuard(int seconds)

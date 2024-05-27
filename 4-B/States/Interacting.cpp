@@ -1,9 +1,9 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "State.h"
-#include "Event.h"
-#include "utility.h"
-#include "Community.h"
-#include "Robot.h"
+#include "../Event.h"
+#include "../utility.h"
+#include "../Community.h"
+#include "../Robot.h"
 #include "Interacting.h"
 
 Interacting::Interacting(shared_ptr<Community> community, shared_ptr<Robot> robot, shared_ptr<StateSystem> system)

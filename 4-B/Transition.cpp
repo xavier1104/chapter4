@@ -1,10 +1,10 @@
 #include "stdafx.h"
 #include "Event.h"
-#include "State.h"
-#include "Guard.h"
-#include "FiniteStateMachine.h"
+#include "States/State.h"
+#include "Guards/Guard.h"
+#include "States/FiniteStateMachine.h"
 #include "Robot.h"
-#include "Action.h"
+#include "Actions/Action.h"
 #include "Transition.h"
 
 Transition::Transition(shared_ptr<State> from, EventType eventType, shared_ptr<Guard> guard, shared_ptr<Action> action, shared_ptr<State> to)

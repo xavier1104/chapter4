@@ -123,7 +123,7 @@
       <AdditionalIncludeDirectories>D:\project\c++\rapidjson-master\rapidjson-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,13 +133,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Action.cpp" />
     <ClCompile Include="Actions\Action.cpp" />
     <ClCompile Include="Actions\CommandAction.cpp" />
     <ClCompile Include="Broadcast.cpp" />
     <ClCompile Include="ChatRoom.cpp" />
-    <ClCompile Include="Command.cpp" />
-    <ClCompile Include="CommandGuard.cpp" />
     <ClCompile Include="Commands\Command.cpp" />
     <ClCompile Include="Commands\KingCommand.cpp" />
     <ClCompile Include="Commands\KingStopCommand.cpp" />
@@ -148,37 +145,19 @@
     <ClCompile Include="Commands\StopRecordingCommand.cpp" />
     <ClCompile Include="Comment.cpp" />
     <ClCompile Include="Community.cpp" />
-    <ClCompile Include="CommandAction.cpp" />
-    <ClCompile Include="DefaultConversation.cpp" />
-    <ClCompile Include="FiniteStateMachine.cpp" />
     <ClCompile Include="Forum.cpp" />
-    <ClCompile Include="Guard.cpp" />
     <ClCompile Include="Guards\CommandGuard.cpp" />
     <ClCompile Include="Guards\Guard.cpp" />
     <ClCompile Include="Guards\MemberLargerOrEqual10Guard.cpp" />
     <ClCompile Include="Guards\MemberLessThan10Guard.cpp" />
     <ClCompile Include="Guards\TimeElapsedGuard.cpp" />
-    <ClCompile Include="Interacting.cpp" />
-    <ClCompile Include="KingCommand.cpp" />
-    <ClCompile Include="KingStopCommand.cpp" />
-    <ClCompile Include="KnowledgeKing.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Member.cpp" />
-    <ClCompile Include="MemberLargerOrEqual10Guard.cpp" />
-    <ClCompile Include="MemberLessThan10Guard.cpp" />
     <ClCompile Include="Message.cpp" />
-    <ClCompile Include="Normal.cpp" />
-    <ClCompile Include="PlayAgainCommand.cpp" />
     <ClCompile Include="Post.cpp" />
-    <ClCompile Include="Questioning.cpp" />
-    <ClCompile Include="Record.cpp" />
-    <ClCompile Include="RecordCommand.cpp" />
-    <ClCompile Include="Recording.cpp" />
     <ClCompile Include="Robot.cpp" />
     <ClCompile Include="RobotFSMFacade.cpp" />
     <ClCompile Include="Speak.cpp" />
-    <ClCompile Include="State.cpp" />
-    <ClCompile Include="StateSystem.cpp" />
     <ClCompile Include="States\DefaultConversation.cpp" />
     <ClCompile Include="States\FiniteStateMachine.cpp" />
     <ClCompile Include="States\Interacting.cpp" />
@@ -191,11 +170,7 @@
     <ClCompile Include="States\StateSystem.cpp" />
     <ClCompile Include="States\ThanksForJoining.cpp" />
     <ClCompile Include="States\Waiting.cpp" />
-    <ClCompile Include="StopRecordingCommand.cpp" />
-    <ClCompile Include="ThanksForJoining.cpp" />
-    <ClCompile Include="TimeElapsedGuard.cpp" />
     <ClCompile Include="Transition.cpp" />
-    <ClCompile Include="Waiting.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Action.h" />
